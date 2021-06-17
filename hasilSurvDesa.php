@@ -1,4 +1,4 @@
-<?php include 'koneksiDesa.php' ?>
+<?php include 'controller/koneksiDesa.php' ?>
 
 
 <!DOCTYPE html>
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="index.html">
+                    <a href="dashboard.html">
                         <h5>SDGS Desa</h5>
                     </a>
                     <a class="mobile-options waves-effect waves-light">
@@ -255,7 +255,7 @@
                         <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Menu</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="">
-                                <a href="index.html" class="waves-effect waves-dark">
+                                <a href="dashboard.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
@@ -297,7 +297,7 @@
                               </a>
                             </li>
                             <li class=" ">
-                                <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
+                                <a href="index.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class=""></i></span>
                                     <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Logout</span>
                                     <span class="pcoded-mcaret"></span>
@@ -499,7 +499,7 @@
                                 <div class="col-md-4">
                                     <ul class="breadcrumb-title">
                                         <li class="breadcrumb-item">
-                                            <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                            <a href="dashboard.html"> <i class="fa fa-home"></i> </a>
                                         </li>
                                         <!-- <li class="breadcrumb-item"><a href="#!">Pages</a>
                                         </li>
@@ -718,6 +718,7 @@
                                                         </div>
 
                                                                 </form>
+                                                                <a href="surveyDesa.php"> <button class="btn btn-primary waves-effect waves-light">UBAH</button> </a>
                                                             </div>
                                                         </div>
                                                     </div>

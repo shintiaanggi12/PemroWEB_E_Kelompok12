@@ -1,8 +1,10 @@
+<?php include 'controller/controllLogin.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>SDGs Login</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -98,9 +100,9 @@
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
 
-                        <form class="md-float-material form-material">
+                        <form class="md-float-material form-material" action="" method="POST">
                             <div class="text-center">
-                                <h5>SDGs Desa</h5>
+                                <!-- <h5>SDGs Desa</h5> -->
                                 <!-- <img src="assets/images/logo.png" alt="logo.png"> -->
                             </div>
                             <div class="auth-box card">
@@ -111,9 +113,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="text" name="email" class="form-control" required="">
+                                        <input type="text" name="username" class="form-control" required="">
                                         <span class="form-bar"></span>
-                                        <label class="float-label">Your Email Address</label>
+                                        <label class="float-label">Username</label>
                                     </div>
                                     <div class="form-group form-primary">
                                         <input type="password" name="password" class="form-control" required="">
@@ -135,15 +137,15 @@
                                         </div>
                                     </div>
                                     <div class="row m-t-30">
-                                        <a href="index.html" class="col-md-12">
-                                            <button type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
+                                        <a  class="col-md-12">
+                                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20" name="login">Sign in</button>
                                         </a>
                                     </div>
                                     <hr/>
                                     <div class="row">
                                         <div class="col-md-10">
                                             <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                            <p class="text-inverse text-left"><a href="index.html"><b>Back to website</b></a></p>
+                                            <!-- <p class="text-inverse text-left"><a href="index.html"><b>Back to website</b></a></p> -->
                                         </div>
                                         <div class="col-md-2">
                                             <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
