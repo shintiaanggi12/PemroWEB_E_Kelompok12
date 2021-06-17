@@ -1,3 +1,5 @@
+<?php include 'koneksiDesa.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -265,7 +267,7 @@
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="surveyDesa.html" class="waves-effect waves-dark">
+                                    <a href="surveyDesa.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Desa</span>
                                         <span class="pcoded-mcaret"></span>
@@ -291,6 +293,13 @@
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Individu</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
+                                </li>
+                                <li>
+                                  <a href="hasilSurvDesa.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                      <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Desa</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
                                 </li>
                                 <li class=" ">
                                     <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
@@ -650,7 +659,7 @@
                                                     </div>
                                                     <div class="card-block">
                                                         <h4 class="sub-title">Survey Desa</h4>
-                                                        <form>
+                                                        <form action="" method="POST">
                                                           <div class="form-group row">
                                                               <label class="col-sm-2 col-form-label">Foto Balai Desa</label>
                                                               <div class="col-sm-10">
@@ -666,219 +675,219 @@
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Email Desa</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="emailDesa"
                                                                     placeholder="Alamat Email Desa">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Web Desa</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="webDesa"
                                                                     placeholder="Alamat Web Desa">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Facebook</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="facebookDesa"
                                                                     placeholder="Alamat Facebook Desa">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Twitter</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="twitterDesa"
                                                                     placeholder="Alamat Twitter Desa">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Instagram</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="instagramDesa"
                                                                     placeholder="Alamat Instagram Desa">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Youtube</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="youtubeDesa"
                                                                     placeholder="Alamat Youtube">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Status Pemerintahan</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Desa</option>
-                                                                        <option value="opt2">Kelurahan</option>
-                                                                        <option value="opt3">Kampung</option>
-                                                                        <option value="opt4">Nagari</option>
-                                                                        <option value="opt5">Gampong</option>
+                                                                    <select name="status" class="form-control">
+                                                                        <option value="Desa">Desa</option>
+                                                                        <option value="Kelurahan">Kelurahan</option>
+                                                                        <option value="Kampung">Kampung</option>
+                                                                        <option value="Nagari">Nagari</option>
+                                                                        <option value="Gampong">Gampong</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Jumlah RT</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="jmlRT"
                                                                     placeholder="Tulis Angka">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Jumlah RW</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="jmlRW"
                                                                     placeholder="Tulis Angka">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Ada SK Pendirian Desa?</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Ya</option>
-                                                                        <option value="opt2">Tidak</option>
+                                                                    <select name="SKdesa" class="form-control">
+                                                                        <option value="Ya">Ya</option>
+                                                                        <option value="Tidak">Tidak</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">SK Pendirian Desa</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="nomerSK"
                                                                     placeholder="No. SK Pendirian">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Ada Peta Desa?</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Ya</option>
-                                                                        <option value="opt2">Tidak</option>
+                                                                    <select name="peta" class="form-control">
+                                                                        <option value="Ya">Ya</option>
+                                                                        <option value="Tidak">Tidak</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">SK Bupati/Gub Ttg Peta</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="nomerSKBUPATI"
                                                                     placeholder="No. SK Bupati">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Luas Wilayah (HA)</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="luasDesa"
                                                                     placeholder="Luas Wilayah Desa (Ha)">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Lokasi Desa terletak di pulau</label>
                                                                 <div class="col-sm-10">
-                                                                    <textarea rows="5" cols="5" class="form-control"
+                                                                    <textarea rows="5" cols="5" class="form-control" name="lokasiDesa"
                                                                     placeholder="Sebutkan nama pulau, pisahkan tanda koma jika banyak"></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Tipografi terluas wilayah</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Lerang/Puncak</option>
-                                                                        <option value="opt2">Lembah</option>
-                                                                        <option value="opt2">Dataran</option>
-                                                                        <option value="opt2">Pesisir Pantai</option>
+                                                                    <select name="tipografi" class="form-control">
+                                                                        <option value="Lerang/Puncak">Lerang/Puncak</option>
+                                                                        <option value="Lembah">Lembah</option>
+                                                                        <option value="Dataran">Dataran</option>
+                                                                        <option value="Pesisir Pantai">Pesisir Pantai</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Jumlah warga di lereng/Puncak</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="jmlWARGA"
                                                                     placeholder="Jumlah warga di lereng/Puncak">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Kantor Kepala Desa</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Ada, layak</option>
-                                                                        <option value="opt2">Ada, tidak layak</option>
-                                                                        <option value="opt2">Tidak layak</option>
+                                                                    <select name="kantorDesa" class="form-control">
+                                                                        <option value="Ada, layak">Ada, layak</option>
+                                                                        <option value="Ada, tidak layak">Ada, tidak layak</option>
+                                                                        <option value="Tidak layak">Tidak layak</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Kepemilikan Kantor</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Aset Desa</option>
-                                                                        <option value="opt2">Bukan Aset Desa</option>
+                                                                    <select name="kepemilikanKantor" class="form-control">
+                                                                        <option value="Aset Desa">Aset Desa</option>
+                                                                        <option value="Bukan Aset Desa">Bukan Aset Desa</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Lokasi Kantor</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Di dalam desa</option>
-                                                                        <option value="opt2">Di luar desa</option>
+                                                                    <select name="lokasiKantor" class="form-control">
+                                                                        <option value="Di dalam desa">Di dalam desa</option>
+                                                                        <option value="Di luar desa">Di luar desa</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Penyelenggaraan pemerintahan dilaksanakan di</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Kantor Kepala Desa/Balai Desa</option>
-                                                                        <option value="opt2">Bukan Kantor Kepala Desa</option>
+                                                                    <select name="penyelenggaraan" class="form-control">
+                                                                        <option value="Kantor Kepala Desa/Balai Desa">Kantor Kepala Desa/Balai Desa</option>
+                                                                        <option value="Bukan Kantor Kepala Desa">Bukan Kantor Kepala Desa</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Jam Kerja Di Kantor Desa</label>
                                                                 <div class="col-sm-10">
-                                                                    <select name="select" class="form-control">
-                                                                        <option value="opt1">Tidak Menentu</option>
-                                                                        <option value="opt2">Ada jadwal kerja</option>
+                                                                    <select name="jamKerja" class="form-control">
+                                                                        <option value="Tidak Menentu">Tidak Menentu</option>
+                                                                        <option value="Ada jadwal kerja">Ada jadwal kerja</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Koordinat Lintang</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="koordinatLintang"
                                                                     placeholder="Koordinat Lintang (Latitude)">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Koordinat Bujur</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="koordinatBujur"
                                                                     placeholder="Koordinat Bujur (Longitude)">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Lintang Utara</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="lintangUtara"
                                                                     placeholder="Lintang Utara">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Lintang Selatan</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="lintangSelatan"
                                                                     placeholder="Lintang Selatan">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Ketinggian Lokasi</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control"
+                                                                    <input type="text" class="form-control" name="ketinggian"
                                                                     placeholder="Dari permukaan laut (DPAL)">
                                                                 </div>
                                                             </div>
-                                                            <button class="btn btn-primary waves-effect waves-light">SIMPAN</button>
+                                                            <button class="btn btn-primary waves-effect waves-light" name="simpan">SIMPAN</button>
                                                             <button class="btn btn-primary waves-effect waves-light">BARU</button>
-                                                            <button class="btn btn-primary waves-effect waves-light">UPLOAD</button>
+                                                            <button class="btn btn-primary waves-effect waves-light" name="upload">UPLOAD</button>
                                                             <!-- <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Password</label>
                                                                 <div class="col-sm-10">

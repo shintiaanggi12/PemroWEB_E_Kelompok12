@@ -265,7 +265,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="surveyDesa.html" class="waves-effect waves-dark">
+                                    <a href="surveyDesa.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Desa</span>
                                         <span class="pcoded-mcaret"></span>
@@ -291,6 +291,13 @@
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Individu</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
+                                </li>
+                                <li>
+                                  <a href="hasilSurvDesa.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                      <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Desa</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
                                 </li>
                                 <li class=" ">
                                     <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
@@ -924,149 +931,537 @@
                                                             <!-- Input Grid card start -->
                                                                   <div class="card">
                                                                       <div class="card-header">
-                                                                          <h5>Survey Individu</h5>
+                                                                          <h5>Entri Survey Individu</h5>
                                                                           <!-- <span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span> -->
 
                                                                       </div>
                                                                       <div class="card-block">
+                                                                        <!-- <div class="sub-title"></div> -->
+                                                                        <!-- Nav tabs -->
+                                                                        <ul class="nav nav-tabs md-tabs" role="tablist">
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link active" data-toggle="tab" href="#home3" role="tab">Data Individu</a>
+                                                                                <div class="slide"></div>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" data-toggle="tab" href="#profile3" role="tab">Pekerjaan</a>
+                                                                                <div class="slide"></div>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" data-toggle="tab" href="#messages3" role="tab">Penghasilan</a>
+                                                                                <div class="slide"></div>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" data-toggle="tab" href="#settings3" role="tab">Kesehatan</a>
+                                                                                <div class="slide"></div>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" data-toggle="tab" href="#disabilitas" role="tab">Disabilitas</a>
+                                                                                <div class="slide"></div>
+                                                                            </li>
+                                                                            <li class="nav-item">
+                                                                                <a class="nav-link" data-toggle="tab" href="#pendidikan" role="tab">Pendidikan</a>
+                                                                                <div class="slide"></div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <!-- Tab panes -->
+                                                                        <div class="tab-content card-block">
+                                                                            <div class="tab-pane active" id="home3" role="tabpanel">
+                                                                                <!-- <p class="m-0">1. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mas Cum sociis natoque penatibus et magnis dis.....</p> -->
+                                                                                <form>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Nama</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Nama Individu">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <select name="select" class="form-control">
+                                                                                              <option value="opt1">Laki-laki</option>
+                                                                                              <option value="opt2">Perempuan</option>
+                                                                                          </select>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Tempat Lahir</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Tempat Lahir">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="dd/MM/yyyy">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Usia</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Jika kurang dari 1 tahun tulis 0">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Status Pernikahan</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <select name="select" class="form-control">
+                                                                                              <option value="opt1">Belum Kawin</option>
+                                                                                              <option value="opt2">Kawin</option>
+                                                                                              <option value="opt2">Cerai Hidup</option>
+                                                                                              <option value="opt2">Cerai Mati</option>
+                                                                                          </select>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Agama</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <select name="select" class="form-control">
+                                                                                              <option value="opt1">Islam</option>
+                                                                                              <option value="opt2">Kristen</option>
+                                                                                              <option value="opt2">Katolik</option>
+                                                                                              <option value="opt2">Hindu</option>
+                                                                                              <option value="opt2">Budha</option>
+                                                                                              <option value="opt2">Khonghucu</option>
+                                                                                              <option value="opt2">lainnya</option>
+                                                                                          </select>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Suku Bangsa</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Tuliskan">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Warga Negara</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <select name="select" class="form-control">
+                                                                                              <option value="opt1">WNI</option>
+                                                                                              <option value="opt2">WNA</option>
+                                                                                          </select>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">No. HP</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Nomor HP">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">No. WA</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Nomor Untuk Whatsapp">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Email</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Email">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Facebook</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Facebook">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Twitter</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Twitter">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Instagraam</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <input type="text" class="form-control"
+                                                                                          placeholder="Instagram">
+                                                                                      </div>
+                                                                                  </div>
+                                                                                  <div class="form-group row">
+                                                                                      <label class="col-sm-2 col-form-label">Apakah Aktif menggunakan internet sebulan terakhir?</label>
+                                                                                      <div class="col-sm-10">
+                                                                                          <select name="select" class="form-control">
+                                                                                              <option value="opt1">Tidak</option>
+                                                                                              <option value="opt2">Ya</option>
+                                                                                          </select>
+                                                                                      </div>
+                                                                                  </div>
+                                                                                </form>
+                                                                            </div>
+                                                                            <div class="tab-pane" id="profile3" role="tabpanel">
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Kondisi Pekerjaan</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Bekerja</option>
+                                                                                          <option value="opt2">Bersekolah</option>
+                                                                                          <option value="opt1">Ibu Rumah Tangga</option>
+                                                                                          <option value="opt2">Tidak Bekerja</option>
+                                                                                          <option value="opt1">Sedang mencari pekerjaan</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Pekerjaan Utama</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Petani pemilik lahan</option>
+                                                                                          <option value="opt2">Petani penyewa</option>
+                                                                                          <option value="opt1">Buruh tani</option>
+                                                                                          <option value="opt2">Nelayan pemilik kapal/perahu</option>
+                                                                                          <option value="opt1">Nelayan penyewa kapal/perahu</option>
+                                                                                          <option value="opt1">Buruh nelayan</option>
+                                                                                          <option value="opt2">Guru</option>
+                                                                                          <option value="opt1">Guru agama</option>
+                                                                                          <option value="opt1">Pedagang</option>
+                                                                                          <option value="opt2">Pengolahan/Industri</option>
+                                                                                          <option value="opt1">PNS</option>
+                                                                                          <option value="opt1">Pensiunan</option>
+                                                                                          <option value="opt2">Perangkat Desa</option>
+                                                                                          <option value="opt1">Pegawai kantor desa</option>
+                                                                                          <option value="opt1">TKI</option>
+                                                                                          <option value="opt1">Lainnya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Jaminan Sosial Ketenagakerjaan</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Peserta</option>
+                                                                                          <option value="opt2">Bukan Peserta</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Penghasilan stahun terakhir (Rp)</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Penghasilan stahun terakhir (Rp)">
+                                                                                  </div>
+                                                                              </div>
+                                                                                <!-- <p class="m-0">2.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet felis amet.</p> -->
+                                                                            </div>
+                                                                            <div class="tab-pane" id="messages3" role="tabpanel">
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Sumber Penghasilan</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Jumlah</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Satuan</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Penghasilan Setahun (Rp)</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Diekspor</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="">
+                                                                                  </div>
+                                                                              </div>
+                                                                                <!-- <p class="m-0">3. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean mas Cum sociis natoque penatibus et magnis dis.....</p> -->
+                                                                            </div>
+                                                                            <div class="tab-pane" id="settings3" role="tabpanel">
+                                                                              <h6> <b> Penyakit yang diderita setahun terakhir </b> </h6> <br>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Muntaber</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Demam Berdarah</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Campak</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Campak</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Malaria</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Flue Burung</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Covid-19</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Hepatitis B</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Leptospirosis</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Kolera</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Gizi buruk (termasuk stunting)</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Jantung</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">TBC paru-paru</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Kanker</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Diabetes/kencing manis/gula</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Hepatitis E</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Difteri</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Chikungunya</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Lumpuh</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Lainnya</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div> <br>
+                                                                              <h6> <b> Berapa kali fasilitas kesehatan berikut didatangi setahun terakhir untuk pengobatan/perawatan </b> </h6> <br>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Rumah Sakit</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Rumah Sakit bersalin</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Puskesmas dgn rawat inap</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Puskesmas tanpa rawat inap</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Puskesmas pembantu</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Poliklinik</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Tempat Praktik dokter</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <input type="text" class="form-control"
+                                                                                      placeholder="Jumlah">
+                                                                                  </div>
+                                                                              </div>
+                                                                                <!-- <p class="m-0">4.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet felis amet.</p> -->
+                                                                            </div>
+                                                                            <div class="tab-pane" id="disabilitas" role="tabpanel">
+                                                                              <h6> <b> INI DISABILITAS </b> </h6> <br>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Muntaber</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                            </div>
+                                                                            <div class="tab-pane" id="pendidikan" role="tabpanel">
+                                                                              <h6> <b> INI pendiidkan </b> </h6> <br>
+                                                                              <div class="form-group row">
+                                                                                  <label class="col-sm-2 col-form-label">Muntaber</label>
+                                                                                  <div class="col-sm-10">
+                                                                                      <select name="select" class="form-control">
+                                                                                          <option value="opt1">Tidak</option>
+                                                                                          <option value="opt2">Ya</option>
+                                                                                      </select>
+                                                                                  </div>
+                                                                              </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                           <!-- <h4 class="sub-title">Basic Inputs</h4> -->
-                                                                          <form>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Nama</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Nama Individu">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <select name="select" class="form-control">
-                                                                                        <option value="opt1">Laki-laki</option>
-                                                                                        <option value="opt2">Perempuan</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Tempat Lahir</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Tempat Lahir">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="dd/MM/yyyy">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Usia</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Jika kurang dari 1 tahun tulis 0">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Status Pernikahan</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <select name="select" class="form-control">
-                                                                                        <option value="opt1">Belum Kawin</option>
-                                                                                        <option value="opt2">Kawin</option>
-                                                                                        <option value="opt2">Cerai Hidup</option>
-                                                                                        <option value="opt2">Cerai Mati</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Agama</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <select name="select" class="form-control">
-                                                                                        <option value="opt1">Islam</option>
-                                                                                        <option value="opt2">Kristen</option>
-                                                                                        <option value="opt2">Katolik</option>
-                                                                                        <option value="opt2">Hindu</option>
-                                                                                        <option value="opt2">Budha</option>
-                                                                                        <option value="opt2">Khonghucu</option>
-                                                                                        <option value="opt2">lainnya</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Suku Bangsa</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Tuliskan">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Warga Negara</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <select name="select" class="form-control">
-                                                                                        <option value="opt1">WNI</option>
-                                                                                        <option value="opt2">WNA</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">No. HP</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Nomor HP">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">No. WA</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Nomor Untuk Whatsapp">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Email</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Email">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Facebook</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Facebook">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Twitter</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Twitter">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Instagraam</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <input type="text" class="form-control"
-                                                                                    placeholder="Instagram">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group row">
-                                                                                <label class="col-sm-2 col-form-label">Apakah Aktif menggunakan internet sebulan terakhir?</label>
-                                                                                <div class="col-sm-10">
-                                                                                    <select name="select" class="form-control">
-                                                                                        <option value="opt1">Tidak</option>
-                                                                                        <option value="opt2">Ya</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                          </form>
-                                                                          <button class="btn btn-primary waves-effect waves-light">SIMPAN</button>
-                                                                          <button class="btn btn-primary waves-effect waves-light">BARU</button>
-                                                                          <button class="btn btn-primary waves-effect waves-light">UPLOAD</button>
+
+
 
                                                                       </div>
+                                                                      <button class="btn btn-primary waves-effect waves-light">SIMPAN</button>
+                                                                      <button class="btn btn-primary waves-effect waves-light">BARU</button>
+                                                                      <button class="btn btn-primary waves-effect waves-light">UPLOAD</button>
                                                                   </div>
+
                                                             <!-- Input Grid card end -->
                                                             <!-- Input Validation card start -->
                                                             <!-- <div class="card">
