@@ -289,7 +289,7 @@
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
-                            <li class="active">
+                            <li class="">
                               <a href="hasilSurvDesa.php" class="waves-effect waves-dark">
                                   <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
                                   <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Desa</span>
@@ -499,7 +499,7 @@
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <div class="page-header-title">
-                                        <h5 class="m-b-10">Hasil Survey Desa</h5>
+                                        <h5 class="m-b-10">Hasil Survey Individu</h5>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -531,200 +531,33 @@
                                                   </div>
                                                   <div class="card-block">
                                                       <!-- <h4 class="sub-title"></h4> -->
-                                                      <form>
+                                                      <form action="" method="POST">
                                                         <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Email Desa</label>
+                                                            <label class="col-sm-2 col-form-label">No. RT/RW</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["emailDesa"];?>" readonly>
+                                                                <input type="text" class="form-control" name="noRTRW" value="<?=@$vnoRTRW?>"
+                                                                placeholder="<?php echo $_SESSION["noRTRW"];?>" readonly>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Web Desa</label>
+                                                            <label class="col-sm-2 col-form-label">No. KK</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["webDesa"];?>" readonly>
+                                                                <input type="text" class="form-control" name="noKK" value="<?=@$vnoKK?>"
+                                                                placeholder="<?php echo $_SESSION["noKK"];?>" readonly>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Facebook Desa</label>
+                                                            <label class="col-sm-2 col-form-label">NIK</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["facebookDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Twitter Desa</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["twitterDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Instagram Desa</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["instagramDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Youtube Desa</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["youtubeDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Status Pemerintahan</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["status"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Jumlah RT</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["jmlRT"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Jumlah RW</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["jmlRW"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Ada SK Pendirian Desa? </label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["SKdesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">SK Pendirian Desa</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["nomerSK"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Ada Peta Desa?</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["peta"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">SK Bupati/Gub Ttg Peta</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["nomerSKBUPATI"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Luas Wilayah (HA)</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["luasDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Lokasi Desa terletak di pulau</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["lokasiDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Tipografi terluas wilayah</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["tipografi"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Jumlah warga di lereng/Puncak</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["jmlWARGA"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Kantor Kepala Desa</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["kantorDesa"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Kepemilikan Kantor</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["kepemilikanKantor"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Lokasi Kantor</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["lokasiKantor"];?>" readonly>
+                                                                <input type="text" class="form-control" name="NIK" value="<?=@$vNIK?>"
+                                                                placeholder="<?php echo $_SESSION["NIK"];?>" readonly>
                                                             </div>
                                                         </div>
 
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Penyelenggaraan pemerintahan dilaksanakan di</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["penyelenggaraan"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Jam Kerja Di Kantor Desa</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["jamKerja"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Koordinat Lintang</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["koordinatLintang"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Koordinat Bujur</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["koordinatBujur"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Lintang Utara</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["lintangUtara"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Lintang Selatan</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["lintangSelatan"];?>" readonly>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">Ketinggian Lokasi</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                placeholder="<?php echo $_SESSION["ketinggian"];?>" readonly>
-                                                            </div>
-                                                        </div>
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light" name="upload3">UPLOAD</button> </a>
 
                                                                 </form>
-                                                                <a href="surveyDesa.php"> <button class="btn btn-primary waves-effect waves-light">UBAH</button> </a>
+
                                                             </div>
                                                         </div>
                                                     </div>

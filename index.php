@@ -1,4 +1,4 @@
-<?php include 'controller/controllLogin.php' ?>
+<?php include 'controller/controll.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">

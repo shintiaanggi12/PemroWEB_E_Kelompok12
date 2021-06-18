@@ -1,5 +1,5 @@
 <?php
-include 'controller/controllLogin.php';
+include 'controller/controll.php';
 
 if( isset($_SESSION["login"]) === false ) {
 	header("Location: index.php");
@@ -263,7 +263,7 @@ if( isset($_SESSION["login"]) === false ) {
                         <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Menu</div>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class="active">
-                                <a href="index.html" class="waves-effect waves-dark">
+                                <a href="dashboard.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
@@ -277,21 +277,21 @@ if( isset($_SESSION["login"]) === false ) {
                                 </a>
                             </li>
                             <li>
-                                <a href="surveyRT.html" class="waves-effect waves-dark">
+                                <a href="surveyRT.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey RT</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class="">
-                                <a href="surveyKeluarga.html" class="waves-effect waves-dark">
+                                <a href="surveyKeluarga.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Keluarga</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="surveyIndividu.html" class="waves-effect waves-dark">
+                                <a href="surveyIndividu.php" class="waves-effect waves-dark">
                                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                     <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Individu</span>
                                     <span class="pcoded-mcaret"></span>
@@ -301,6 +301,13 @@ if( isset($_SESSION["login"]) === false ) {
                               <a href="hasilSurvDesa.php" class="waves-effect waves-dark">
                                   <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
                                   <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Desa</span>
+                                  <span class="pcoded-mcaret"></span>
+                              </a>
+                            </li>
+														<li>
+                              <a href="hasilSurvIndividu.php" class="waves-effect waves-dark">
+                                  <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                  <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Individu</span>
                                   <span class="pcoded-mcaret"></span>
                               </a>
                             </li>

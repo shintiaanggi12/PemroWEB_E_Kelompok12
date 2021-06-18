@@ -1,3 +1,5 @@
+<?php include 'controller/controll.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,7 +116,7 @@
                             </div>
                         </div>
                         <!-- logo kiri atas -->
-                        <a href="dashboard.html">
+                        <a href="dashboard.php">
                             <h5>SDGS Desa</h5>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
@@ -188,7 +190,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>Shintia Anggi</span>
+                                    <span><?php echo $_SESSION["username"]; ?></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -213,7 +215,7 @@
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="auth-normal-sign-in.html">
+                                        <a href="logout.php">
                                             <i class="ti-layout-sidebar-left"></i> Logout
                                         </a>
                                     </li>
@@ -233,7 +235,7 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">Shintia Anggi<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details"><?php echo $_SESSION["username"]; ?><i class="fa fa-caret-down"></i></span>
                                     </div>
                                 </div>
 
@@ -242,7 +244,7 @@
                                         <li class="more-details">
                                             <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
                                             <a href="#!"><i class="ti-settings"></i>Settings</a>
-                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                            <a href="logout.php"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -259,7 +261,7 @@
                             <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Menu</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="dashboard.html" class="waves-effect waves-dark">
+                                    <a href="dashboard.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                                         <span class="pcoded-mcaret"></span>
@@ -274,21 +276,21 @@
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="surveyRT.html" class="waves-effect waves-dark">
+                                    <a href="surveyRT.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey RT</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="surveyKeluarga.html" class="waves-effect waves-dark">
+                                    <a href="surveyKeluarga.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Keluarga</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="surveyIndividu.html" class="waves-effect waves-dark">
+                                    <a href="surveyIndividu.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Individu</span>
                                         <span class="pcoded-mcaret"></span>
@@ -301,8 +303,15 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
+                                <li>
+                                  <a href="hasilSurvIndividu.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                      <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Individu</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                                </li>
                                 <li class=" ">
-                                    <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
+                                    <a href="logout.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class=""></i></span>
                                         <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Logout</span>
                                         <span class="pcoded-mcaret"></span>
@@ -325,7 +334,7 @@
                                     <div class="col-md-4">
                                         <ul class="breadcrumb-title">
                                             <li class="breadcrumb-item">
-                                                <a href="dashboard.html"> <i class="fa fa-home"></i> </a>
+                                                <a href="dashboard.php"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Survey RT</a>
                                             </li>
@@ -358,6 +367,7 @@
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">No. RT/RW</label>
                                                             </div>
+                                                            <button class="btn btn-primary waves-effect waves-light">SIMPAN</button>
                                                             <!-- <div class="form-group form-default">
                                                                 <input type="text" name="footer-email" class="form-control" required="">
                                                                 <span class="form-bar"></span>

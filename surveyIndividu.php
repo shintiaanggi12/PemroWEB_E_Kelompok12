@@ -1,3 +1,5 @@
+<?php include 'controller/controll.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="dashboard.html">
+                        <a href="dashboard.php">
                             <h5>SDGS Desa</h5>
                         </a>
                         <a class="mobile-options waves-effect waves-light">
@@ -156,7 +158,7 @@
                                         <div class="media">
                                             <img class="d-flex align-self-center img-radius" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
                                             <div class="media-body">
-                                                <h5 class="notification-user">Shintia Anggi</h5>
+                                                <h5 class="notification-user"><?php echo $_SESSION["username"]; ?></h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
                                                 <span class="notification-time">30 minutes ago</span>
                                             </div>
@@ -187,7 +189,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>Shintia Anggi</span>
+                                    <span><?php echo $_SESSION["username"]; ?></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -212,7 +214,7 @@
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="auth-normal-sign-in.html">
+                                        <a href="logout.php">
                                             <i class="ti-layout-sidebar-left"></i> Logout
                                         </a>
                                     </li>
@@ -232,7 +234,7 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">Shintia Anggi<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details"><?php echo $_SESSION["username"]; ?><i class="fa fa-caret-down"></i></span>
                                     </div>
                                 </div>
 
@@ -241,7 +243,7 @@
                                         <li class="more-details">
                                             <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
                                             <a href="#!"><i class="ti-settings"></i>Settings</a>
-                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                            <a href="logout.php"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -258,7 +260,7 @@
                             <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Menu</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a href="dashboard.html" class="waves-effect waves-dark">
+                                    <a href="dashboard.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                                         <span class="pcoded-mcaret"></span>
@@ -279,14 +281,14 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="surveyKeluarga.html" class="waves-effect waves-dark">
+                                    <a href="surveyKeluarga.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Keluarga</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="surveyIndividu.html" class="waves-effect waves-dark">
+                                    <a href="surveyIndividu.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Survey Individu</span>
                                         <span class="pcoded-mcaret"></span>
@@ -299,8 +301,15 @@
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                                 </li>
+                                <li>
+                                  <a href="hasilSurvIndividu.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
+                                      <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Hasil Survey Individu</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                                </li>
                                 <li class=" ">
-                                    <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
+                                    <a href="logout.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class=""></i></span>
                                         <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Logout</span>
                                         <span class="pcoded-mcaret"></span>
@@ -441,14 +450,13 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">WELCOME</h5>
-                                            <p class="m-b-0">Selamat Datang di Website SDGs Desa</p>
+                                            <h5 class="m-b-10">Entri Survey Individu</h5>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <ul class="breadcrumb-title">
                                             <li class="breadcrumb-item">
-                                                <a href="dashboard.html"> <i class="fa fa-home"></i> </a>
+                                                <a href="dashboard.php"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a href="#!">Survey Individu</a>
                                             </li>
@@ -657,28 +665,32 @@
                                                     </div>
                                                     <div class="card-block">
                                                         <h4 class="sub-title">Survey Individu</h4>
-                                                        <form>
+                                                        <form action="" method="POST">
                                                           <div class="form-group row">
                                                               <h5 <label class="col-sm-2 col-form-label">No. RT/RW</label> </h5>
                                                               <div class="col-sm-10">
-                                                                  <input type="text" class="form-control"
+                                                                  <input type="text" class="form-control" name="noRTRW" required="" value="<?=@$vnoRTRW?>"
                                                                   placeholder="No. RT/RW">
                                                               </div>
                                                           </div>
                                                           <div class="form-group row">
                                                               <h5 <label class="col-sm-2 col-form-label">No. KK</label> </h5>
                                                               <div class="col-sm-10">
-                                                                  <input type="text" class="form-control"
+                                                                  <input type="text" class="form-control" name="noKK" required="" value="<?=@$vnoKK?>"
                                                                   placeholder="No. KK">
                                                               </div>
                                                           </div>
                                                           <div class="form-group row">
                                                               <h5 <label class="col-sm-2 col-form-label">NIK</label> </h5>
                                                               <div class="col-sm-10">
-                                                                  <input type="text" class="form-control"
+                                                                  <input type="text" class="form-control" name="NIK" required="" value="<?=@$vNIK?>"
                                                                   placeholder="NIK">
                                                               </div>
                                                           </div>
+                                                          <a href="hasilSurvIndividu.php">
+                                                          <button class="btn btn-primary waves-effect waves-light" name="simpan2">SIMPAN</button>
+                                                          </a>
+                                                        </form>
 
                                                             <!-- <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Password</label>
@@ -922,7 +934,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div> -->
-                                                                          </form>
+
                                                                       </div>
                                                                   </div>
                                                               </div>
@@ -1457,7 +1469,7 @@
 
 
                                                                       </div>
-                                                                      <button class="btn btn-primary waves-effect waves-light">SIMPAN</button>
+                                                                      <button class="btn btn-primary waves-effect waves-light" name="simpan2">SIMPAN</button>
                                                                       <button class="btn btn-primary waves-effect waves-light">BARU</button>
                                                                       <button class="btn btn-primary waves-effect waves-light">UPLOAD</button>
                                                                   </div>
