@@ -531,25 +531,25 @@
                                                   </div>
                                                   <div class="card-block">
                                                       <!-- <h4 class="sub-title"></h4> -->
-                                                      <form>
+                                                      <form action="" method="POST">
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label">Email Desa</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
+                                                                <input type="text" class="form-control" name="emailDesa" value="<?=@$vemailDesa?>"
                                                                 placeholder="<?php echo $_SESSION["emailDesa"];?>" readonly>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label">Web Desa</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
+                                                                <input type="text" class="form-control" name="webDesa" value="<?=@$vwebDesa?>"
                                                                 placeholder="<?php echo $_SESSION["webDesa"];?>" readonly>
                                                             </div>
                                                         </div>
                                                         <div class="form-group row">
                                                             <label class="col-sm-2 col-form-label">Facebook Desa</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
+                                                                <input type="text" class="form-control" name="facebookDesa" value="<?=@$vfbDesa?>"
                                                                 placeholder="<?php echo $_SESSION["facebookDesa"];?>" readonly>
                                                             </div>
                                                         </div>
@@ -723,8 +723,11 @@
                                                             </div>
                                                         </div>
 
+                                                        <a href="surveyDesa.php"> <button class="btn btn-primary waves-effect waves-light">UBAH</button> </a>
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light" name="upload2">UPLOAD</button>
+
                                                                 </form>
-                                                                <a href="surveyDesa.php"> <button class="btn btn-primary waves-effect waves-light">UBAH</button> </a>
+
                                                             </div>
                                                         </div>
                                                     </div>
